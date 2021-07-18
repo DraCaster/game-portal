@@ -1,6 +1,11 @@
 <template>
   <v-container>
-    <v-row class="mx-auto">
+    <v-row v-if="this.statusGame === 'Gano'">
+      <v-col cols="12">
+        <Confetti/>
+      </v-col>
+    </v-row>
+    <v-row class="mx-auto" v-else>
       <v-col sm="6">
         <h1>Ahorcado</h1>
         <v-row>
@@ -58,6 +63,7 @@
 import HangmanProvider from "../provider/hangmanProvider";
 import HangmanImage from "../components/HangmanImage";
 import Alert from "../../Commons/components/Alert";
+import Confetti from "../../../components/Animations/Confetti/Confetti";
 
 export default {
 
@@ -65,7 +71,7 @@ export default {
     this.newGame()
   },
   components:{
-    HangmanImage,Alert
+    HangmanImage,Alert,Confetti
   },
   data() {
     return {

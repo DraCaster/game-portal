@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import ahorcado from '../assets/ahorcado.png'
+import ahorcado from '../assets/hangman/ahorcado.png'
 import tateti from '../assets/tateti.png'
 import nyancat from '../assets/nyan-cat.gif'
 
